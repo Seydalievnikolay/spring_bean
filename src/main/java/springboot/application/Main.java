@@ -10,8 +10,12 @@ public class Main {
         AbstractApplicationContext context =
                 new AnnotationConfigApplicationContext(Config.class);
 
-        Driver driver = context.getBean(Driver.class);
-        driver.getReadyToWork();
+        Driver driverCar = context.getBean("driver_car",Driver.class);
+        driverCar.getReadyToWork();
+        Driver driverPickup = context.getBean("driver_pickup", Driver.class);
+        driverPickup.getReadyToWork();
+        Driver driverBus = context.getBean("driver_bus", Driver.class);
+        driverBus.getReadyToWork();
 
     }
 }

@@ -18,15 +18,15 @@ public class Config {
     public Transport bus() {
         return new Bus();
     }
-    @Bean
+    @Bean(name = "driver_car")
     public Driver getDriverCarBean() {
         return new Driver("Frank", car());
     }
-    @Bean
+    @Bean(name = "driver_pickup")
     public Driver getDriverPickupBen() {
         return new Driver("Alonso", pickup());
     }
-    @Bean
+    @Bean(name = "driver_bus")
     public Driver getDriverBusBean() {
 
         return new Driver("Michael", bus());
